@@ -3,6 +3,8 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    amd: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
@@ -16,15 +18,12 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint'
-  ],
+  plugins: ['react', '@typescript-eslint'],
   overrides: [
     {
       files: ['*.tsx'],
@@ -36,11 +35,14 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
-    'jsx-a11y/anchor-is-valid': [ 'error', {
-      'components': [ 'Link' ],
-      'specialLink': [ 'hrefLeft', 'hrefRight' ],
-      'aspects': [ 'invalidHref', 'preferButton' ],
-    }],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
     'jsx-a11y/no-onchange': 'off',
   },
 }
