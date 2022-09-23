@@ -1,12 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path');
-
 module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'app/styles')],
+  async redirects() {
+    return [
+      {
+        source: '/tasks',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
-  i18n: {
-    locales: ['en-US'],
-    defaultLocale: 'en-US',
-  },
-};
+}
