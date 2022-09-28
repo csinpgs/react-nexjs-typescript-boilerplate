@@ -6,6 +6,7 @@ export interface User {
 export const USER_ROLES = {
   Admin: 'ADMIN',
   General: 'GENERAL',
+  SuperAdmin: 'SUPER',
 } as const
 
 export type UserRole = typeof USER_ROLES[keyof typeof USER_ROLES]
