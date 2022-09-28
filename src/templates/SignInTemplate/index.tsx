@@ -114,7 +114,7 @@ const SignInTemplate: VFC<SignInTemplateProps> = ({ redirect }) => {
               <div className="mb-5">
                 <div className="mb-3">
                   <div className="mb-1">
-                    <Label htmlFor={inputIds.nickname}>Nickname</Label>
+                    <Label htmlFor={inputIds.nickname}>Username</Label>
                   </div>
                   <div>
                     <TextField
